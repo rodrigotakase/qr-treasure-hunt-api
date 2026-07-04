@@ -1,0 +1,256 @@
+:root {
+    --bg: #f4f4f8;
+    --surface: #ffffff;
+    --text: #1e1e2c;
+    --muted: #6f6f84;
+    --border: #e2e2ec;
+    --accent: #6d28d9;
+    --accent-dark: #5b21b6;
+    --danger: #dc2626;
+    --danger-dark: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 1.5rem;
+}
+
+.brand {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+main {
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    font-size: 1.45rem;
+    margin: 0 0 1.2rem;
+}
+
+a {
+    color: var(--accent);
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.table-card {
+    padding: 0.4rem 1.2rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.num {
+    text-align: right;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.empty {
+    color: var(--muted);
+    font-style: italic;
+}
+
+input[type="text"] {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font: inherit;
+    background: var(--surface);
+    color: var(--text);
+}
+
+input[type="text"]:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: -1px;
+    border-color: var(--accent);
+}
+
+input[type="color"] {
+    width: 3rem;
+    height: 2.2rem;
+    padding: 0.15rem;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--surface);
+}
+
+button, .button {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--accent);
+    border-radius: 7px;
+    background: var(--accent);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+button:hover, .button:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+button.ghost, .button.ghost {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+}
+
+button.ghost:hover, .button.ghost:hover {
+    background: var(--bg);
+}
+
+button.danger, .button.danger {
+    background: var(--danger);
+    border-color: var(--danger);
+}
+
+button.danger:hover, .button.danger:hover {
+    background: var(--danger-dark);
+    border-color: var(--danger-dark);
+}
+
+.inline-form {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inline-form input[type="text"] {
+    flex: 1;
+    min-width: 12rem;
+}
+
+.rename-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.actions .button {
+    margin-left: 0.3rem;
+}
+
+.toolbar {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.form {
+    display: grid;
+    gap: 0.9rem;
+    max-width: 28rem;
+}
+
+.form label {
+    display: grid;
+    gap: 0.3rem;
+    font-weight: 600;
+}
+
+.form input[type="text"] {
+    width: 100%;
+}
+
+.form .buttons {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.swatch {
+    display: inline-block;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    vertical-align: -0.2rem;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.back:hover {
+    color: var(--text);
+}
+
+.qr {
+    text-align: center;
+}
+
+.qr img {
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.mono {
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+    word-break: break-all;
+}
