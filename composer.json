@@ -1,0 +1,22 @@
+{
+    "name": "rodrigotakase/qr-treasure-hunt-api",
+    "description": "Backend for a QR code treasure hunt game: scan crystals in the real world, collect them, climb the leaderboard",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-gd": "*",
+        "endroid/qr-code": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
